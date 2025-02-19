@@ -26,7 +26,7 @@ const Page = () => {
             kebutuhan akademik maupun bisnis Anda.
           </p>
           <div>
-            <button className="px-8 py-3 rounded-full bg-black text-white mt-14 uppercase w-full">
+            <button className="px-8 py-3 rounded-full bg-black text-white mt-14 uppercase max-xs:w-full">
               Pesan Sekarang
             </button>
           </div>
