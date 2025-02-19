@@ -1,5 +1,4 @@
 import { NeonGradientCardDemo } from "@/components/neonGradient";
-// import { CheckIcon } from "lucide-react";
 
 const Page = () => {
   return (
@@ -15,7 +14,7 @@ const Page = () => {
       </header>
 
       <section className="flex flex-col md:flex-row gap-4 px-4">
-        <div className="rounded-2xl bg-gray-300 px-8 py-10 flex-1 z-20">
+        <div className="rounded-2xl bg-gray-200 px-8 py-10 flex-1 z-20">
           <p className="text-sm mb-4 uppercase">Cepat, Aman, & Anti Ribet</p>
           <h1 className="text-black text-4xl xs:text-5xl font-bold uppercase tracking-tight leading-tight max-w-2xl">
             Automasi Tugas, Maksimalkan Produktivitas
@@ -33,7 +32,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="max-w-md w-full flex flex-col gap-4">
+        <div className="md:max-w-md w-full flex flex-col gap-4">
           <NeonGradientCardDemo />
           <div className="flex-1 px-8 py-10 bg-black/30 border border-white/10 rounded-2xl z-20">
             <h1 className="text-xl text-gray-100">
