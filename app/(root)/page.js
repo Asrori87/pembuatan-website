@@ -1,4 +1,5 @@
 import { NeonGradientCardDemo } from "@/components/neonGradient";
+// import { Pricing } from "@/components/pricing";
 
 const Page = () => {
   return (
@@ -7,7 +8,7 @@ const Page = () => {
         <h1 className="text-2xl text-white font-bold uppercase">Eassly</h1>
         <button className="p-[3px] relative">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
-          <div className="px-8 py-2  bg-black rounded-full relative group transition duration-200 text-white hover:bg-transparent">
+          <div className="px-8 py-2 bg-black rounded-full relative group transition duration-200 text-white hover:bg-transparent">
             Pesan Sekarang
           </div>
         </button>
@@ -16,7 +17,7 @@ const Page = () => {
       <section className="flex flex-col md:flex-row gap-4 px-4">
         <div className="rounded-2xl bg-gray-200 px-8 py-10 flex-1 z-20">
           <p className="text-sm mb-4 uppercase">Cepat, Aman, & Anti Ribet</p>
-          <h1 className="text-black text-4xl xs:text-5xl font-bold uppercase tracking-tight leading-tight max-w-2xl">
+          <h1 className="text-black text-4xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-tight max-w-2xl">
             Automasi Tugas, Maksimalkan Produktivitas
             {/* Tugas NumPuk? Santai, Biar Kami yang Kerjakan! */}
           </h1>
@@ -44,6 +45,10 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+      {/* <section className="">
+        <Pricing />
+      </section> */}
     </div>
   );
 };

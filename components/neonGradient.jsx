@@ -27,7 +27,7 @@ export function NeonGradientCardDemo() {
 const Step = ({ title }) => {
   return (
     <li className="flex gap-2 items-center">
-      <div className="size-6 flex items-center justify-center bg-gray-700 rounded">
+      <div className="min-w-6 min-h-6 flex items-center justify-center bg-gray-700 rounded">
         <CheckIcon size={16} className="" />
       </div>
       <p className="text-gray-400 text-sm font-medium tracking-tight">
