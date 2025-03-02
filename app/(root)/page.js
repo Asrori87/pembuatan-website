@@ -17,7 +17,7 @@ const Page = () => {
 
       <section className="flex flex-col md:flex-row gap-4 px-4">
         <div className="rounded-2xl bg-gray-200 px-8 py-10 flex-1 z-20">
-          <p className="text-sm mb-4 uppercase text-gray-500">
+          <p className="text-sm mb-4 uppercase text-gray-600">
             Cepat, Aman, & Anti Ribet
           </p>
           <h1 className="text-black text-4xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-tight max-w-2xl">
@@ -49,7 +49,7 @@ const Page = () => {
         </div>
       </section>
 
-      <ScrollBasedVelocity />
+      <ScrollBasedVelocity>Deadline</ScrollBasedVelocity>
 
       <section className="min-h-screen max-w-6xl mx-auto">
         <Pricing />

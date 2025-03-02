@@ -1,4 +1,5 @@
 import { pricingPlans } from "@/data";
+import { ShinyButtonDemo } from "./shinyButton";
 
 export default pricingPlans;
 
@@ -19,7 +20,9 @@ export function Pricing() {
           {pricingPlans.map((plan) => (
             <div
               key={plan.id}
-              className="relative bg-neutral-950 border border-neutral-800 p-6 shadow-lg rounded-lg flex flex-col"
+              className={`relative bg-neutral-900 border px-8 py-10 shadow-lg rounded-2xl flex flex-col ${
+                plan.isPopular ? "border-blue-500" : "border-neutral-700"
+              }`}
             >
               <div className="flex-1">
                 {plan.isPopular && (
@@ -37,7 +40,7 @@ export function Pricing() {
                     {plan.priceRange}
                   </p>
                 </div>
-                <p className="text-gray-300 text-sm">{plan.suitableFor}</p>
+                {/* <p className="text-gray-300 text-sm">{plan.suitableFor}</p> */}
 
                 <ul className="text-left mt-4 space-y-2">
                   {plan.features.map((feature, index) => (
@@ -51,9 +54,15 @@ export function Pricing() {
                 </ul>
               </div>
 
-              <button className="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-                {plan.cta}
-              </button>
+              {plan.isPopular ? (
+                <ShinyButtonDemo className="rounded-full">
+                  {plan.cta}
+                </ShinyButtonDemo>
+              ) : (
+                <button className="mt-6 w-full bg-white/10 text-white py-2 rounded-full hover:bg-blue-700">
+                  {plan.cta}
+                </button>
+              )}
             </div>
           ))}
         </div>

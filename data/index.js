@@ -8,7 +8,7 @@ export const pricingPlans = [
     features: [
       "1-3 Halaman Sederhana",
       "Desain Responsif",
-      "Hosting Gratis (Netlify/Vercel)",
+      // "Hosting Gratis (Netlify/Vercel)",
       "Revisi 1x",
     ],
     isPopular: false,
@@ -24,7 +24,7 @@ export const pricingPlans = [
       "3-6 Halaman",
       "UI/UX Menarik",
       "Integrasi Form (Contoh: Contact)",
-      "Hosting Gratis",
+      // "Hosting Gratis",
       "Revisi 2x",
     ],
     isPopular: true,
