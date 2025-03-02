@@ -1,59 +1,63 @@
+import { pricingPlans } from "@/data";
+
+export default pricingPlans;
+
 export function Pricing() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-12">
-      {[
-        {
-          title: "Basic",
-          price: "50K - 150K",
-          features: [
-            "1-3 Halaman",
-            "Desain Responsif",
-            "Hosting Gratis",
-            "Revisi 1x",
-          ],
-        },
-        {
-          title: "Standard",
-          price: "200K - 400K",
-          features: [
-            "3-6 Halaman",
-            "UI/UX Menarik",
-            "Integrasi Form",
-            "Revisi 2x",
-          ],
-          popular: true,
-        },
-        {
-          title: "Premium",
-          price: "500K - 1.5JT",
-          features: [
-            "6+ Halaman",
-            "Custom Desain",
-            "SEO Optimasi",
-            "Revisi 3x",
-          ],
-        },
-      ].map((pkg, index) => (
-        <div
-          key={index}
-          className={`p-6 rounded-xl shadow-lg text-center ${
-            pkg.popular ? "bg-blue-500 text-white" : "bg-white border"
-          }`}
-        >
-          <h3 className="text-2xl font-bold">{pkg.title}</h3>
-          <p className="text-xl font-semibold my-2">{pkg.price}</p>
-          <ul className="text-sm space-y-2">
-            {pkg.features.map((feature, i) => (
-              <li key={i} className="flex justify-center items-center gap-2">
-                ✅ {feature}
-              </li>
-            ))}
-          </ul>
-          <button className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg">
-            Pesan Sekarang
-          </button>
+    <div className="px-4 py-12">
+      <h1 className="text-3xl text-gray-200 mb-4 font-semibold">
+        Pilih Paket yang Sesuai!
+      </h1>
+      <p className="text-gray-300 max-w-xl mb-8 text-base">
+        Kami menawarkan paket fleksibel yang sesuai dengan kebutuhanmu. Dari
+        tugas kuliah, portofolio, hingga bisnis – semua bisa dibuat dengan harga
+        terjangkau!
+      </p>
+
+      <div className="mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pricingPlans.map((plan) => (
+            <div
+              key={plan.id}
+              className="relative bg-neutral-950 border border-neutral-800 p-6 shadow-lg rounded-lg flex flex-col"
+            >
+              <div className="flex-1">
+                {plan.isPopular && (
+                  <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    Paling Populer
+                  </span>
+                )}
+
+                <div className="pb-4 mb-4 border-b-2 border-neutral-700">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-100">
+                    {plan.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm">{plan.description}</p>
+                  <p className="text-lg text-gray-100 font-bold mt-4">
+                    {plan.priceRange}
+                  </p>
+                </div>
+                <p className="text-gray-300 text-sm">{plan.suitableFor}</p>
+
+                <ul className="text-left mt-4 space-y-2">
+                  {plan.features.map((feature, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center gap-2 text-gray-200"
+                    >
+                      ✅ {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                {plan.cta}
+              </button>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 }

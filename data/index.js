@@ -1,0 +1,50 @@
+export const pricingPlans = [
+  {
+    id: "basic",
+    title: "Paket Basic",
+    description: "Solusi simpel untuk kebutuhan website cepat!",
+    priceRange: "Rp50.000 - Rp150.000",
+    suitableFor: "Tugas, proyek kecil, atau kebutuhan sederhana lainnya.",
+    features: [
+      "1-3 Halaman Sederhana",
+      "Desain Responsif",
+      "Hosting Gratis (Netlify/Vercel)",
+      "Revisi 1x",
+    ],
+    isPopular: false,
+    cta: "Pesan Sekarang",
+  },
+  {
+    id: "standard",
+    title: "Paket Standard",
+    description: "Portofolio dan website pribadi yang profesional!",
+    priceRange: "Rp200.000 - Rp400.000",
+    suitableFor: "Personal branding, showcase karya, atau CV online.",
+    features: [
+      "3-6 Halaman",
+      "UI/UX Menarik",
+      "Integrasi Form (Contoh: Contact)",
+      "Hosting Gratis",
+      "Revisi 2x",
+    ],
+    isPopular: true,
+    cta: "Pesan Sekarang",
+  },
+  {
+    id: "premium",
+    title: "Paket Premium",
+    description: "Website bisnis/organisasi yang siap berkembang!",
+    priceRange: "Rp500.000 - Rp1.500.000",
+    suitableFor:
+      "Bisnis, komunitas, atau brand yang butuh website profesional.",
+    features: [
+      "6+ Halaman",
+      "Custom Desain",
+      "Integrasi Database (Supabase)",
+      "SEO & Performa Optimasi",
+      "Revisi 3x",
+    ],
+    isPopular: false,
+    cta: "Pesan Sekarang",
+  },
+];
